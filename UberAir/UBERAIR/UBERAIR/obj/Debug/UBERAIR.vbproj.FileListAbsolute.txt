@@ -46,3 +46,14 @@ C:\Users\Alumno.IMAGEN17\Desktop\Uber Air - GitHub\UberAir\UBERAIR\UBERAIR\obj\D
 C:\Users\Alumno.IMAGEN17\Desktop\Uber Air - GitHub\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Iniciar_Sesion.resources
 C:\Users\Alumno.IMAGEN17\Desktop\Uber Air - GitHub\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Resources.resources
 C:\Users\Alumno.IMAGEN17\Desktop\Uber Air - GitHub\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbproj.GenerateResource.Cache
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe.config
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.pdb
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.xml
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Administrador.resources
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Iniciar_Sesion.resources
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Resources.resources
+C:\Users\herna_000\Desktop\UberAir-Editando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbproj.GenerateResource.Cache
