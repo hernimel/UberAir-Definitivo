@@ -78,6 +78,7 @@ Partial Class Administrador
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Btn_CancelarReserva = New System.Windows.Forms.Button()
         Me.Btn_ConfirmarReserva = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
@@ -100,7 +101,7 @@ Partial Class Administrador
         Me.PasajerosTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.PasajerosTableAdapter()
         Me.ReservasTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.ReservasTableAdapter()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Id_empresaLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         RolLabel = New System.Windows.Forms.Label()
@@ -225,6 +226,7 @@ Partial Class Administrador
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
+        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.DronesDataGridView)
         Me.TabPage1.Controls.Add(Me.Btn_BorrarDrone)
         Me.TabPage1.Controls.Add(Me.Btn_AgregarDrone)
@@ -605,6 +607,11 @@ Partial Class Administrador
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(0, 17)
         '
+        'ToolStripStatusLabel2
+        '
+        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
+        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(0, 17)
+        '
         'Btn_CancelarReserva
         '
         Me.Btn_CancelarReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -755,10 +762,14 @@ Partial Class Administrador
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'ToolStripStatusLabel2
+        'Button1
         '
-        Me.ToolStripStatusLabel2.Name = "ToolStripStatusLabel2"
-        Me.ToolStripStatusLabel2.Size = New System.Drawing.Size(0, 17)
+        Me.Button1.Location = New System.Drawing.Point(551, 325)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Administrador
         '
@@ -865,5 +876,6 @@ Partial Class Administrador
     Friend WithEvents Btn_ConfirmarReserva As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
