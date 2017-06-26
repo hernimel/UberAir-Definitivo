@@ -72,3 +72,12 @@ C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBE
 C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
 C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
 C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.pdb
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.xml
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Administrador.resources
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Cliente.resources
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Iniciar_Sesion.resources
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Resources.resources
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbproj.GenerateResource.Cache
+C:\Users\Alumno.IMAGEN17\Documents\GitHub\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.HacerReservaCliente.resources

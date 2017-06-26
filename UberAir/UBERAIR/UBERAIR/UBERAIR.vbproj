@@ -90,6 +90,12 @@
     <Compile Include="Cliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HacerReservaCliente.Designer.vb">
+      <DependentUpon>HacerReservaCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HacerReservaCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Iniciar_Sesion.Designer.vb">
       <DependentUpon>Iniciar_Sesion.vb</DependentUpon>
     </Compile>
@@ -115,6 +121,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Administrador.resx">
       <DependentUpon>Administrador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cliente.resx">
+      <DependentUpon>Cliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HacerReservaCliente.resx">
+      <DependentUpon>HacerReservaCliente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar_Sesion.resx">
       <DependentUpon>Iniciar_Sesion.vb</DependentUpon>
