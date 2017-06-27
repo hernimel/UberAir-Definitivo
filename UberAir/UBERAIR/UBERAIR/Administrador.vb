@@ -10,17 +10,18 @@
         Dim Autonomia As Integer = 30
         Dim Estado As Boolean = False
         Dim Creditos As Integer = 0
-        Dim n As Integer
+        Dim n, i As Integer
         Dim fila As System.Data.DataRowView
 
         DroneInput = InputBox("Ingrese Id_Drone para agregar: ")
 
         If DroneInput = "" Then
             MessageBox.Show("Por favor llene el campo")
+            InputBox("Ingrese Id_Drone para agregar: ")
             Exit Sub
         End If
 
-        n = Me.DronesBindingSource.Count
+        n = Me.DronesBindingSource.Count 'Cuenta la cantidad de registros
         Me.DronesBindingSource.MoveFirst()
 
         For i = 1 To n
@@ -32,29 +33,30 @@
             Me.DronesBindingSource.MoveNext()
         Next
 
-        Select Case DroneInput
-            Case Microsoft.VisualBasic.Left(DroneInput, 1) = "A"
-                Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
-                Capacidad = 1
-                Estado = False
-                Creditos = 2
-            Case Microsoft.VisualBasic.Left(DroneInput, 1) = "B"
-                Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
-                Capacidad = 2
-                Estado = False
-                Creditos = "4"
-            Case Microsoft.VisualBasic.Left(DroneInput, 1) = "C"
-                Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
-                Capacidad = "4"
-                Estado = False
-                Creditos = "6"
-        End Select
+        If Microsoft.VisualBasic.Left(DroneInput, 1) = "A" Then
+            Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
+            Capacidad = 1
+            Estado = False
+            Creditos = 2
+        ElseIf Microsoft.VisualBasic.Left(DroneInput, 1) = "B" Then
+            Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
+            Capacidad = 2
+            Estado = False
+            Creditos = "4"
+        ElseIf Microsoft.VisualBasic.Left(DroneInput, 1) = "C" Then
+            Modelo = Microsoft.VisualBasic.Left(DroneInput, 1)
+            Capacidad = "4"
+            Estado = False
+            Creditos = "6"
+        End If
+
 
         Me.DronesTableAdapter.InsertDroneQuery(DroneInput, Modelo, Capacidad, Autonomia, Estado, Creditos)
         Me.DronesTableAdapter.Fill(Me.BDUberAirDataSet.Drones)
     End Sub
-
     Private Sub Administrador_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'BDUberAirDataSet.Bases' Puede moverla o quitarla según sea necesario.
+        Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)
         'TODO: esta línea de código carga datos en la tabla 'BDUberAirDataSet.Reservas' Puede moverla o quitarla según sea necesario.
         Me.ReservasTableAdapter.Fill(Me.BDUberAirDataSet.Reservas)
         'TODO: esta línea de código carga datos en la tabla 'BDUberAirDataSet.Pasajeros' Puede moverla o quitarla según sea necesario.
@@ -101,12 +103,19 @@
         Me.PasajerosTableAdapter.Fill(Me.BDUberAirDataSet.Pasajeros)
     End Sub
 
-    
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Me.ToolStripStatusLabel1.Text = Date.Now
     End Sub
 
-    Private Sub Btn_ConfirmarReserva_Click(sender As Object, e As EventArgs) Handles Btn_ConfirmarReserva.Click
+    Private Sub Btn_InsertarBases_Click(sender As Object, e As EventArgs) Handles Btn_InsertarBases.Click
+        Me.BasesTableAdapter.InsertBasesQuery(NombreTextBox1.Text)
+        Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)
 
+    End Sub
+
+    Private Sub Btn_EliminarBases_Click(sender As Object, e As EventArgs) Handles Btn_EliminarBases.Click
+        Me.BasesTableAdapter.DeleteBasesQuery(NombreTextBox1.Text)
+        Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)
     End Sub
 End Class

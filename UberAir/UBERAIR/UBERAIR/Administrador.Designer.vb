@@ -32,9 +32,9 @@ Partial Class Administrador
         Dim ApellidoLabel As System.Windows.Forms.Label
         Dim DNILabel As System.Windows.Forms.Label
         Dim CelularLabel As System.Windows.Forms.Label
+        Dim NombreLabel1 As System.Windows.Forms.Label
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.DronesDataGridView = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -95,6 +95,12 @@ Partial Class Administrador
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReservasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.NombreTextBox1 = New System.Windows.Forms.TextBox()
+        Me.BasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Btn_EliminarBases = New System.Windows.Forms.Button()
+        Me.Btn_InsertarBases = New System.Windows.Forms.Button()
+        Me.BasesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.DronesTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.DronesTableAdapter()
         Me.TableAdapterManager = New UBERAIR.BDUberAirDataSetTableAdapters.TableAdapterManager()
@@ -102,7 +108,7 @@ Partial Class Administrador
         Me.PasajerosTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.PasajerosTableAdapter()
         Me.ReservasTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.ReservasTableAdapter()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BasesTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.BasesTableAdapter()
         Id_empresaLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         RolLabel = New System.Windows.Forms.Label()
@@ -112,6 +118,7 @@ Partial Class Administrador
         ApellidoLabel = New System.Windows.Forms.Label()
         DNILabel = New System.Windows.Forms.Label()
         CelularLabel = New System.Windows.Forms.Label()
+        NombreLabel1 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.DronesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,6 +134,9 @@ Partial Class Administrador
         Me.StatusStrip1.SuspendLayout()
         CType(Me.ReservasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.BasesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BasesDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_empresaLabel
@@ -210,6 +220,15 @@ Partial Class Administrador
         CelularLabel.TabIndex = 12
         CelularLabel.Text = "Celular:"
         '
+        'NombreLabel1
+        '
+        NombreLabel1.AutoSize = True
+        NombreLabel1.Location = New System.Drawing.Point(665, 158)
+        NombreLabel1.Name = "NombreLabel1"
+        NombreLabel1.Size = New System.Drawing.Size(47, 13)
+        NombreLabel1.TabIndex = 3
+        NombreLabel1.Text = "Nombre:"
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -227,8 +246,6 @@ Partial Class Administrador
         'TabPage1
         '
         Me.TabPage1.AutoScroll = True
-        Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Controls.Add(Me.Button1)
         Me.TabPage1.Controls.Add(Me.DronesDataGridView)
         Me.TabPage1.Controls.Add(Me.Btn_BorrarDrone)
         Me.TabPage1.Controls.Add(Me.Btn_AgregarDrone)
@@ -239,15 +256,6 @@ Partial Class Administrador
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Drone"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(551, 325)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'DronesDataGridView
         '
@@ -723,6 +731,11 @@ Partial Class Administrador
         '
         'TabPage5
         '
+        Me.TabPage5.Controls.Add(NombreLabel1)
+        Me.TabPage5.Controls.Add(Me.NombreTextBox1)
+        Me.TabPage5.Controls.Add(Me.Btn_EliminarBases)
+        Me.TabPage5.Controls.Add(Me.Btn_InsertarBases)
+        Me.TabPage5.Controls.Add(Me.BasesDataGridView)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Padding = New System.Windows.Forms.Padding(3)
@@ -730,6 +743,54 @@ Partial Class Administrador
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Bases"
         Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'NombreTextBox1
+        '
+        Me.NombreTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BasesBindingSource, "Nombre", True))
+        Me.NombreTextBox1.Location = New System.Drawing.Point(718, 155)
+        Me.NombreTextBox1.Name = "NombreTextBox1"
+        Me.NombreTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox1.TabIndex = 4
+        '
+        'BasesBindingSource
+        '
+        Me.BasesBindingSource.DataMember = "Bases"
+        Me.BasesBindingSource.DataSource = Me.BDUberAirDataSet
+        '
+        'Btn_EliminarBases
+        '
+        Me.Btn_EliminarBases.Location = New System.Drawing.Point(718, 80)
+        Me.Btn_EliminarBases.Name = "Btn_EliminarBases"
+        Me.Btn_EliminarBases.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_EliminarBases.TabIndex = 2
+        Me.Btn_EliminarBases.Text = "Eliminar"
+        Me.Btn_EliminarBases.UseVisualStyleBackColor = True
+        '
+        'Btn_InsertarBases
+        '
+        Me.Btn_InsertarBases.Location = New System.Drawing.Point(718, 32)
+        Me.Btn_InsertarBases.Name = "Btn_InsertarBases"
+        Me.Btn_InsertarBases.Size = New System.Drawing.Size(75, 23)
+        Me.Btn_InsertarBases.TabIndex = 1
+        Me.Btn_InsertarBases.Text = "Insertar"
+        Me.Btn_InsertarBases.UseVisualStyleBackColor = True
+        '
+        'BasesDataGridView
+        '
+        Me.BasesDataGridView.AutoGenerateColumns = False
+        Me.BasesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.BasesDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn24})
+        Me.BasesDataGridView.DataSource = Me.BasesBindingSource
+        Me.BasesDataGridView.Location = New System.Drawing.Point(72, 32)
+        Me.BasesDataGridView.Name = "BasesDataGridView"
+        Me.BasesDataGridView.Size = New System.Drawing.Size(508, 208)
+        Me.BasesDataGridView.TabIndex = 0
+        '
+        'DataGridViewTextBoxColumn24
+        '
+        Me.DataGridViewTextBoxColumn24.DataPropertyName = "Nombre"
+        Me.DataGridViewTextBoxColumn24.HeaderText = "Nombre"
+        Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
         '
         'TabPage6
         '
@@ -773,14 +834,9 @@ Partial Class Administrador
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 1000
         '
-        'Button2
+        'BasesTableAdapter
         '
-        Me.Button2.Location = New System.Drawing.Point(727, 348)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BasesTableAdapter.ClearBeforeFill = True
         '
         'Administrador
         '
@@ -815,6 +871,10 @@ Partial Class Administrador
         Me.StatusStrip1.PerformLayout()
         CType(Me.ReservasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        CType(Me.BasesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BasesDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -887,7 +947,12 @@ Partial Class Administrador
     Friend WithEvents Btn_ConfirmarReserva As System.Windows.Forms.Button
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents BasesBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents BasesTableAdapter As UBERAIR.BDUberAirDataSetTableAdapters.BasesTableAdapter
+    Friend WithEvents NombreTextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Btn_EliminarBases As System.Windows.Forms.Button
+    Friend WithEvents Btn_InsertarBases As System.Windows.Forms.Button
+    Friend WithEvents BasesDataGridView As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewTextBoxColumn24 As System.Windows.Forms.DataGridViewTextBoxColumn
 
 End Class
