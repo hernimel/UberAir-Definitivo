@@ -9,10 +9,3 @@
 
 End Class
 
-
-
-Namespace BDUberAirDataSetTableAdapters
-    
-    Partial Public Class UsuariosTableAdapter
-    End Class
-End Namespace

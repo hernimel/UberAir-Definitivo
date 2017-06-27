@@ -22,4 +22,9 @@
             Me.PasajerosBindingSource.MoveNext()  'mueve el puntero al proximo registro
         Next
     End Sub
+
+    Private Sub TxtB_IdReserva_TextChanged(sender As Object, e As EventArgs) Handles TxtB_IdReserva.TextChanged
+
+    End Sub
+
 End Class

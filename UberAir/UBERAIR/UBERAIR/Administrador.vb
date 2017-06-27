@@ -13,11 +13,10 @@
         Dim n, i As Integer
         Dim fila As System.Data.DataRowView
 
-        DroneInput = InputBox("Ingrese Id_Drone para agregar: ")
+        DroneInput = InputBox("Ingrese Id_DInputBoxrone para agregar: ")
 
         If DroneInput = "" Then
-            MessageBox.Show("Por favor llene el campo")
-            InputBox("Ingrese Id_Drone para agregar: ")
+            MessageBox.Show("No se ingresó ningún DRONE")
             Exit Sub
         End If
 
@@ -79,7 +78,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_ModificarUsuarios.Click
-        Me.UsuariosTableAdapter.UpdateUsuariosQuery(Id_empresaTextBoxUsuarios.Text, ContraseñaTextBoxUsuarios.Text, RolTextBoxUsuarios.Text, Creditos_MensualesTextBoxUsuarios.Text)
+        Me.UsuariosTableAdapter.UpdateUsuarioActualizado(ContraseñaTextBoxUsuarios.Text, RolTextBoxUsuarios.Text, Creditos_MensualesTextBoxUsuarios.Text, Id_empresaTextBoxUsuarios.Text)
         Me.UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
     End Sub
 
@@ -109,8 +108,26 @@
     End Sub
 
     Private Sub Btn_InsertarBases_Click(sender As Object, e As EventArgs) Handles Btn_InsertarBases.Click
-        Me.BasesTableAdapter.InsertBasesQuery(NombreTextBox1.Text)
+
+        Dim nomBase As String
+
+        nomBase = InputBox("Ingrese la nueva Base")
+
+        'n = Me.DronesBindingSource.Count 'Cuenta la cantidad de registros
+        'Me.DronesBindingSource.MoveFirst()
+
+        'For i = 1 To n
+        '    fila = Me.DronesBindingSource.Current
+        '    If nomBase = fila.Item("id_Drone") Then
+        '        MessageBox.Show("El id del Drone ya existe, por favor ingrese otro")
+        '        Exit Sub
+        '    End If
+        '    Me.DronesBindingSource.MoveNext()
+        'Next
+
+        Me.BasesTableAdapter.InsertBasesQuery(nomBase)
         Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)
+
 
     End Sub
 
@@ -118,4 +135,5 @@
         Me.BasesTableAdapter.DeleteBasesQuery(NombreTextBox1.Text)
         Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)
     End Sub
+
 End Class
