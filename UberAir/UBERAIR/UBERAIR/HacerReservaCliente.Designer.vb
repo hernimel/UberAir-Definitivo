@@ -45,6 +45,7 @@ Partial Class HacerReservaCliente
         Me.Lbl_Pasajeros = New System.Windows.Forms.Label()
         Me.Lbl_Drones = New System.Windows.Forms.Label()
         Me.PasajerosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Lbl_IdReserva = New System.Windows.Forms.Label()
         CType(Me.Divisor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +110,7 @@ Partial Class HacerReservaCliente
         Me.TxtB_IdReserva.Name = "TxtB_IdReserva"
         Me.TxtB_IdReserva.Size = New System.Drawing.Size(100, 20)
         Me.TxtB_IdReserva.TabIndex = 10
+        Me.ToolTip1.SetToolTip(Me.TxtB_IdReserva, "Ingrese la/s inicial/es de su empresa y el número de reserva.")
         '
         'TxtB_NumeroDePasajeros
         '
@@ -281,4 +283,5 @@ Partial Class HacerReservaCliente
     Friend WithEvents Lbl_Pasajeros As System.Windows.Forms.Label
     Friend WithEvents Lbl_Drones As System.Windows.Forms.Label
     Friend WithEvents PasajerosBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class
