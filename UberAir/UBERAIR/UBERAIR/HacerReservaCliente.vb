@@ -1,7 +1,7 @@
 ﻿Public Class HacerReservaCliente
     Public usuarioLogeadoHR As String
     Private Sub HacerReservaCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Me.ReservasTableAdapter.Fill(Me.BdUberAirDataSet.Reservas)
     End Sub
 
     Private Sub MonthCalendar1_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar1.DateChanged
@@ -77,6 +77,10 @@
     End Sub
 
     Private Sub ConfirmarReservas_Click(sender As Object, e As EventArgs) Handles ConfirmarReserva.Click
-
+        Dim idReserva As String
+        idReserva = Left(usuarioLogeadoHR, 1)
+        Me.ReservasTableAdapter.ConfirmarReservaInsertQuery(Id_Reserva:=, Id_Drone:=, Fecha_y_hora:=, Lugar:=, Estado:=, Dni_Pasajero1:=, Dni_Pasajero2:=, Dni_Pasajero3:=
+                                                            , Dni_Pasajero4:=)
+        Me.ReservasTableAdapter.Fill(Me.BdUberAirDataSet.Reservas)
     End Sub
 End Class

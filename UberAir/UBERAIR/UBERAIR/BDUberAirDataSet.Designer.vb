@@ -5625,7 +5625,7 @@ Namespace BDUberAirDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(2) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(3) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Reserva, Id_Drone, [Fecha y hora], Lugar, Estado, Dni_Pasajero1, Dni_Pa" & _
@@ -5652,6 +5652,12 @@ Namespace BDUberAirDataSetTableAdapters
                 "sajero2, Dni_Pasajero3, Dni_Pasajero4 "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM Reservas"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE LEFT(Id_Reservas,1)"& _ 
                 " = ?"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(3).Connection = Me.Connection
+            Me._commandCollection(3).CommandText = "SELECT Id_Reserva, Id_Drone, [Fecha y hora], Lugar, Estado, Dni_Pasajero1, Dni_Pa"& _ 
+                "sajero2, Dni_Pasajero3, Dni_Pasajero4 "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM Reservas"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE LEFT(Id_Reserva"& _ 
+                ",1) = ?"
+            Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -6100,6 +6106,32 @@ Namespace BDUberAirDataSetTableAdapters
                 End If
             End Try
             Return returnValue
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function UltimaReservaQuery() As Object
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Object
+            Try 
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            If ((returnValue Is Nothing)  _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return Nothing
+            Else
+                Return CType(returnValue,Object)
+            End If
         End Function
     End Class
 
