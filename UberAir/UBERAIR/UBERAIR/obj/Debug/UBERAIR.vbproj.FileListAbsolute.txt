@@ -121,6 +121,7 @@ C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBE
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+<<<<<<< HEAD
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe.config
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
@@ -135,3 +136,6 @@ C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UB
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Iniciar_Sesion.resources
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Resources.resources
 C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbproj.GenerateResource.Cache
+=======
+C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.VerReservas.resources
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31

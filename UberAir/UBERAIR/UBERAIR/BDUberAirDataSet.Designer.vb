@@ -2626,7 +2626,11 @@ Partial Public Class BDUberAirDataSet
                 Try
                     Return CType(Me(Me.tableHoja_de_Ruta.Fecha_y_Hora_de_ReservaColumn), Date)
                 Catch e As Global.System.InvalidCastException
+<<<<<<< HEAD
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha y Hora de Reserva' in table 'Hoja de Ruta' is DBNull." & _
+=======
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha y Hora de Reserva' in table 'Hoja de Ruta' is DBNull."& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                             "", e)
                 End Try
             End Get
@@ -2642,7 +2646,11 @@ Partial Public Class BDUberAirDataSet
                 Try
                     Return CType(Me(Me.tableHoja_de_Ruta._Fecha_y_Hora_de_Salida__Base_Column), Date)
                 Catch e As Global.System.InvalidCastException
+<<<<<<< HEAD
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha y Hora de Salida (Base)' in table 'Hoja de Ruta' is D" & _
+=======
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Fecha y Hora de Salida (Base)' in table 'Hoja de Ruta' is D"& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                             "BNull.", e)
                 End Try
             End Get
@@ -2658,7 +2666,11 @@ Partial Public Class BDUberAirDataSet
                 Try
                     Return CType(Me(Me.tableHoja_de_Ruta.Hora_Estimada_de_LlegadaColumn), Date)
                 Catch e As Global.System.InvalidCastException
+<<<<<<< HEAD
                     Throw New Global.System.Data.StrongTypingException("The value for column 'Hora Estimada de Llegada' in table 'Hoja de Ruta' is DBNull" & _
+=======
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Hora Estimada de Llegada' in table 'Hoja de Ruta' is DBNull"& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                             ".", e)
                 End Try
             End Get
@@ -5613,12 +5625,33 @@ Namespace BDUberAirDataSetTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
+            Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(2) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT Id_Reserva, Id_Drone, [Fecha y hora], Lugar, Estado, Dni_Pasajero1, Dni_Pa" & _
                 "sajero2, Dni_Pasajero3, Dni_Pasajero4 FROM Reservas"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "INSERT INTO `Reservas` "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"(`Id_Reserva`, `Id_Drone`, `Fecha y hora`, `Lugar`, `E"& _ 
+                "stado`, `Dni_Pasajero1`, `Dni_Pasajero2`, `Dni_Pasajero3`, `Dni_Pasajero4`) "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)& _ 
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_Reserva", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_Reserva", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_Drone", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_Drone", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Fecha_y_hora", Global.System.Data.OleDb.OleDbType.[Date], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Fecha y hora", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Lugar", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Lugar", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Estado", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Estado", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dni_Pasajero1", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dni_Pasajero1", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dni_Pasajero2", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dni_Pasajero2", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dni_Pasajero3", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dni_Pasajero3", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Dni_Pasajero4", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Dni_Pasajero4", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
+            Me._commandCollection(2).Connection = Me.Connection
+            Me._commandCollection(2).CommandText = "SELECT Id_Reserva, Id_Drone, [Fecha y hora], Lugar, Estado, Dni_Pasajero1, Dni_Pa"& _ 
+                "sajero2, Dni_Pasajero3, Dni_Pasajero4 "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"FROM Reservas"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"WHERE LEFT(Id_Reservas,1)"& _ 
+                " = ?"
+            Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -5644,11 +5677,30 @@ Namespace BDUberAirDataSetTableAdapters
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
+<<<<<<< HEAD
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
         Public Overridable Overloads Function Update(ByVal dataTable As BDUberAirDataSet.ReservasDataTable) As Integer
+=======
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], false)>  _
+        Public Overloads Overridable Function ReservasEmpresaGetDataBy() As BDUberAirDataSet.ReservasDataTable
+            Me.Adapter.SelectCommand = Me.CommandCollection(2)
+            Dim dataTable As BDUberAirDataSet.ReservasDataTable = New BDUberAirDataSet.ReservasDataTable()
+            Me.Adapter.Fill(dataTable)
+            Return dataTable
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As BDUberAirDataSet.ReservasDataTable) As Integer
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
             Return Me.Adapter.Update(dataTable)
         End Function
 
@@ -5982,6 +6034,73 @@ Namespace BDUberAirDataSetTableAdapters
                     ByVal Original_Dni_Pasajero4 As String) As Integer
             Return Me.Update(Original_Id_Reserva, Original_Id_Drone, Fecha_y_hora, Lugar, Estado, Dni_Pasajero1, Dni_Pasajero2, Dni_Pasajero3, Dni_Pasajero4, Original_Id_Reserva, Original_Id_Drone, Original_Fecha_y_hora, Original_Lugar, Original_Estado, Original_Dni_Pasajero1, Original_Dni_Pasajero2, Original_Dni_Pasajero3, Original_Dni_Pasajero4)
         End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function ConfirmarReservaInsertQuery(ByVal Id_Reserva As String, ByVal Id_Drone As String, ByVal Fecha_y_hora As Global.System.Nullable(Of Date), ByVal Lugar As String, ByVal Estado As String, ByVal Dni_Pasajero1 As Global.System.Nullable(Of Integer), ByVal Dni_Pasajero2 As String, ByVal Dni_Pasajero3 As String, ByVal Dni_Pasajero4 As String) As Integer
+            Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
+            If (Id_Reserva Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Id_Reserva")
+            Else
+                command.Parameters(0).Value = CType(Id_Reserva,String)
+            End If
+            If (Id_Drone Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Id_Drone")
+            Else
+                command.Parameters(1).Value = CType(Id_Drone,String)
+            End If
+            If (Fecha_y_hora.HasValue = true) Then
+                command.Parameters(2).Value = CType(Fecha_y_hora.Value,Date)
+            Else
+                command.Parameters(2).Value = Global.System.DBNull.Value
+            End If
+            If (Lugar Is Nothing) Then
+                command.Parameters(3).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(3).Value = CType(Lugar,String)
+            End If
+            If (Estado Is Nothing) Then
+                command.Parameters(4).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(4).Value = CType(Estado,String)
+            End If
+            If (Dni_Pasajero1.HasValue = true) Then
+                command.Parameters(5).Value = CType(Dni_Pasajero1.Value,Integer)
+            Else
+                command.Parameters(5).Value = Global.System.DBNull.Value
+            End If
+            If (Dni_Pasajero2 Is Nothing) Then
+                command.Parameters(6).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(6).Value = CType(Dni_Pasajero2,String)
+            End If
+            If (Dni_Pasajero3 Is Nothing) Then
+                command.Parameters(7).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(7).Value = CType(Dni_Pasajero3,String)
+            End If
+            If (Dni_Pasajero4 Is Nothing) Then
+                command.Parameters(8).Value = Global.System.DBNull.Value
+            Else
+                command.Parameters(8).Value = CType(Dni_Pasajero4,String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open
+            End If
+            Dim returnValue As Integer
+            Try 
+                returnValue = command.ExecuteNonQuery
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close
+                End If
+            End Try
+            Return returnValue
+        End Function
     End Class
 
     '''<summary>
@@ -6177,396 +6296,396 @@ Namespace BDUberAirDataSetTableAdapters
             Me._commandCollection(1).Connection = Me.Connection
             Me._commandCollection(1).CommandText = "DELETE FROM `Usuarios` WHERE (`Id_empresa` = ?) "
             Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Id_empresa", Global.System.Data.DataRowVersion.Original, False, Nothing))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_empresa", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._commandCollection(2) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(2).Connection = Me.Connection
-            Me._commandCollection(2).CommandText = "INSERT INTO `Usuarios` (`Id_empresa`, `Contraseña`, `Rol`, `Creditos_Mensuales`) " & _
+            Me._commandCollection(2).CommandText = "INSERT INTO `Usuarios` (`Id_empresa`, `Contraseña`, `Rol`, `Creditos_Mensuales`) "& _ 
                 "VALUES (?, ?, ?, ?)"
             Me._commandCollection(2).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Id_empresa", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Rol", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_empresa", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Rol", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(2).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._commandCollection(3) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(3).Connection = Me.Connection
-            Me._commandCollection(3).CommandText = "UPDATE `Usuarios` " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "SET `Contraseña` = ?, `Rol` = ?, `Creditos_Mensuales` = ? " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "W" & _
+            Me._commandCollection(3).CommandText = "UPDATE `Usuarios` "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"SET `Contraseña` = ?, `Rol` = ?, `Creditos_Mensuales` = ? "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"W"& _ 
                 "HERE (`Id_empresa` = ?)"
             Me._commandCollection(3).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Rol", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Id_empresa", Global.System.Data.DataRowVersion.Original, False, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Rol", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(3).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_empresa", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._commandCollection(4) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(4).Connection = Me.Connection
-            Me._commandCollection(4).CommandText = "UPDATE `Usuarios` SET `Id_empresa` = ?, `Contraseña` = ?, `Rol` = ?, `Creditos_Me" & _
+            Me._commandCollection(4).CommandText = "UPDATE `Usuarios` SET `Id_empresa` = ?, `Contraseña` = ?, `Rol` = ?, `Creditos_Me"& _ 
                 "nsuales` = ?"
             Me._commandCollection(4).CommandType = Global.System.Data.CommandType.Text
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Id_empresa", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Rol", Global.System.Data.DataRowVersion.Current, False, Nothing))
-            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0, Byte), CType(0, Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, False, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Id_empresa", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Id_empresa", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Contraseña", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Contraseña", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Rol", Global.System.Data.OleDb.OleDbType.WChar, 255, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Rol", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._commandCollection(4).Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Creditos_Mensuales", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Creditos_Mensuales", Global.System.Data.DataRowVersion.Current, false, Nothing))
         End Sub
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, True)> _
-        Public Overridable Overloads Function Fill(ByVal dataTable As BDUberAirDataSet.UsuariosDataTable) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Fill, true)>  _
+        Public Overloads Overridable Function Fill(ByVal dataTable As BDUberAirDataSet.UsuariosDataTable) As Integer
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
-            If (Me.ClearBeforeFill = True) Then
-                dataTable.Clear()
+            If (Me.ClearBeforeFill = true) Then
+                dataTable.Clear
             End If
             Dim returnValue As Integer = Me.Adapter.Fill(dataTable)
             Return returnValue
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], True)> _
-        Public Overridable Overloads Function GetData() As BDUberAirDataSet.UsuariosDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.[Select], true)>  _
+        Public Overloads Overridable Function GetData() As BDUberAirDataSet.UsuariosDataTable
             Me.Adapter.SelectCommand = Me.CommandCollection(0)
             Dim dataTable As BDUberAirDataSet.UsuariosDataTable = New BDUberAirDataSet.UsuariosDataTable()
             Me.Adapter.Fill(dataTable)
             Return dataTable
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
-        Public Overridable Overloads Function Update(ByVal dataTable As BDUberAirDataSet.UsuariosDataTable) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataTable As BDUberAirDataSet.UsuariosDataTable) As Integer
             Return Me.Adapter.Update(dataTable)
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
-        Public Overridable Overloads Function Update(ByVal dataSet As BDUberAirDataSet) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataSet As BDUberAirDataSet) As Integer
             Return Me.Adapter.Update(dataSet, "Usuarios")
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
-        Public Overridable Overloads Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRow As Global.System.Data.DataRow) As Integer
             Return Me.Adapter.Update(New Global.System.Data.DataRow() {dataRow})
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
-        Public Overridable Overloads Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")>  _
+        Public Overloads Overridable Function Update(ByVal dataRows() As Global.System.Data.DataRow) As Integer
             Return Me.Adapter.Update(dataRows)
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, True)> _
-        Public Overridable Overloads Function Delete(ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
+        Public Overloads Overridable Function Delete(ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             If (Original_Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Id_empresa")
             Else
-                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id_empresa, String)
+                Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_Id_empresa,String)
             End If
             If (Original_Contraseña Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1, Object)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0, Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Contraseña, String)
+                Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Contraseña,String)
             End If
             If (Original_Rol Is Nothing) Then
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1, Object)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(4).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0, Object)
-                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Rol, String)
+                Me.Adapter.DeleteCommand.Parameters(3).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(4).Value = CType(Original_Rol,String)
             End If
-            If (Original_Creditos_Mensuales.HasValue = True) Then
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0, Object)
-                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Creditos_Mensuales.Value, Integer)
+            If (Original_Creditos_Mensuales.HasValue = true) Then
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.DeleteCommand.Parameters(6).Value = CType(Original_Creditos_Mensuales.Value,Integer)
             Else
-                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1, Object)
+                Me.Adapter.DeleteCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(6).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.DeleteCommand.Connection.State
-            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((Me.Adapter.DeleteCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.DeleteCommand.Connection.Open()
+                Me.Adapter.DeleteCommand.Connection.Open
             End If
-            Try
+            Try 
                 Dim returnValue As Integer = Me.Adapter.DeleteCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.DeleteCommand.Connection.Close()
+                    Me.Adapter.DeleteCommand.Connection.Close
                 End If
             End Try
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, True)> _
-        Public Overridable Overloads Function Insert(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
+        Public Overloads Overridable Function Insert(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             If (Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Id_empresa")
             Else
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id_empresa, String)
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Id_empresa,String)
             End If
             If (Contraseña Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Contraseña, String)
+                Me.Adapter.InsertCommand.Parameters(1).Value = CType(Contraseña,String)
             End If
             If (Rol Is Nothing) Then
                 Me.Adapter.InsertCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Rol, String)
+                Me.Adapter.InsertCommand.Parameters(2).Value = CType(Rol,String)
             End If
-            If (Creditos_Mensuales.HasValue = True) Then
-                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Creditos_Mensuales.Value, Integer)
+            If (Creditos_Mensuales.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(3).Value = CType(Creditos_Mensuales.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
-            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.InsertCommand.Connection.Open()
+                Me.Adapter.InsertCommand.Connection.Open
             End If
-            Try
+            Try 
                 Dim returnValue As Integer = Me.Adapter.InsertCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.InsertCommand.Connection.Close()
+                    Me.Adapter.InsertCommand.Connection.Close
                 End If
             End Try
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, True)> _
-        Public Overridable Overloads Function Update(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             If (Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Id_empresa")
             Else
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id_empresa, String)
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Id_empresa,String)
             End If
             If (Contraseña Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Contraseña, String)
+                Me.Adapter.UpdateCommand.Parameters(1).Value = CType(Contraseña,String)
             End If
             If (Rol Is Nothing) Then
                 Me.Adapter.UpdateCommand.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Rol, String)
+                Me.Adapter.UpdateCommand.Parameters(2).Value = CType(Rol,String)
             End If
-            If (Creditos_Mensuales.HasValue = True) Then
-                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Creditos_Mensuales.Value, Integer)
+            If (Creditos_Mensuales.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Creditos_Mensuales.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             If (Original_Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Id_empresa")
             Else
-                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_Id_empresa, String)
+                Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_Id_empresa,String)
             End If
             If (Original_Contraseña Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1, Object)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0, Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Contraseña, String)
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Contraseña,String)
             End If
             If (Original_Rol Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1, Object)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0, Object)
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Rol, String)
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Rol,String)
             End If
-            If (Original_Creditos_Mensuales.HasValue = True) Then
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0, Object)
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Creditos_Mensuales.Value, Integer)
+            If (Original_Creditos_Mensuales.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Creditos_Mensuales.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1, Object)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
-            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                Me.Adapter.UpdateCommand.Connection.Open()
+                Me.Adapter.UpdateCommand.Connection.Open
             End If
-            Try
+            Try 
                 Dim returnValue As Integer = Me.Adapter.UpdateCommand.ExecuteNonQuery
                 Return returnValue
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    Me.Adapter.UpdateCommand.Connection.Close()
+                    Me.Adapter.UpdateCommand.Connection.Close
                 End If
             End Try
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, True)> _
-        Public Overridable Overloads Function Update(ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
+        Public Overloads Overridable Function Update(ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String, ByVal Original_Contraseña As String, ByVal Original_Rol As String, ByVal Original_Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             Return Me.Update(Original_Id_empresa, Contraseña, Rol, Creditos_Mensuales, Original_Id_empresa, Original_Contraseña, Original_Rol, Original_Creditos_Mensuales)
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, False)> _
-        Public Overridable Overloads Function DeleteUsuariosQuery(ByVal Id_empresa As String) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, false)>  _
+        Public Overloads Overridable Function DeleteUsuariosQuery(ByVal Id_empresa As String) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(1)
             If (Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Id_empresa")
             Else
-                command.Parameters(0).Value = CType(Id_empresa, String)
+                command.Parameters(0).Value = CType(Id_empresa,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open()
+                command.Connection.Open
             End If
             Dim returnValue As Integer
-            Try
+            Try 
                 returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close()
+                    command.Connection.Close
                 End If
             End Try
             Return returnValue
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, False)> _
-        Public Overridable Overloads Function InsertUsuariosQuery(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, false)>  _
+        Public Overloads Overridable Function InsertUsuariosQuery(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(2)
             If (Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Id_empresa")
             Else
-                command.Parameters(0).Value = CType(Id_empresa, String)
+                command.Parameters(0).Value = CType(Id_empresa,String)
             End If
             If (Contraseña Is Nothing) Then
                 command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(Contraseña, String)
+                command.Parameters(1).Value = CType(Contraseña,String)
             End If
             If (Rol Is Nothing) Then
                 command.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(2).Value = CType(Rol, String)
+                command.Parameters(2).Value = CType(Rol,String)
             End If
-            If (Creditos_Mensuales.HasValue = True) Then
-                command.Parameters(3).Value = CType(Creditos_Mensuales.Value, Integer)
+            If (Creditos_Mensuales.HasValue = true) Then
+                command.Parameters(3).Value = CType(Creditos_Mensuales.Value,Integer)
             Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open()
+                command.Connection.Open
             End If
             Dim returnValue As Integer
-            Try
+            Try 
                 returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close()
+                    command.Connection.Close
                 End If
             End Try
             Return returnValue
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, False)> _
-        Public Overridable Overloads Function UpdateUsuarioActualizado(ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateUsuarioActualizado(ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer), ByVal Original_Id_empresa As String) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(3)
             If (Contraseña Is Nothing) Then
                 command.Parameters(0).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(0).Value = CType(Contraseña, String)
+                command.Parameters(0).Value = CType(Contraseña,String)
             End If
             If (Rol Is Nothing) Then
                 command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(Rol, String)
+                command.Parameters(1).Value = CType(Rol,String)
             End If
-            If (Creditos_Mensuales.HasValue = True) Then
-                command.Parameters(2).Value = CType(Creditos_Mensuales.Value, Integer)
+            If (Creditos_Mensuales.HasValue = true) Then
+                command.Parameters(2).Value = CType(Creditos_Mensuales.Value,Integer)
             Else
                 command.Parameters(2).Value = Global.System.DBNull.Value
             End If
             If (Original_Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Original_Id_empresa")
             Else
-                command.Parameters(3).Value = CType(Original_Id_empresa, String)
+                command.Parameters(3).Value = CType(Original_Id_empresa,String)
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open()
+                command.Connection.Open
             End If
             Dim returnValue As Integer
-            Try
+            Try 
                 returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close()
+                    command.Connection.Close
                 End If
             End Try
             Return returnValue
         End Function
-
-        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
-         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"), _
-         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, False)> _
-        Public Overridable Overloads Function UpdateUsuariosQuery(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
+         Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, false)>  _
+        Public Overloads Overridable Function UpdateUsuariosQuery(ByVal Id_empresa As String, ByVal Contraseña As String, ByVal Rol As String, ByVal Creditos_Mensuales As Global.System.Nullable(Of Integer)) As Integer
             Dim command As Global.System.Data.OleDb.OleDbCommand = Me.CommandCollection(4)
             If (Id_empresa Is Nothing) Then
                 Throw New Global.System.ArgumentNullException("Id_empresa")
             Else
-                command.Parameters(0).Value = CType(Id_empresa, String)
+                command.Parameters(0).Value = CType(Id_empresa,String)
             End If
             If (Contraseña Is Nothing) Then
                 command.Parameters(1).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(1).Value = CType(Contraseña, String)
+                command.Parameters(1).Value = CType(Contraseña,String)
             End If
             If (Rol Is Nothing) Then
                 command.Parameters(2).Value = Global.System.DBNull.Value
             Else
-                command.Parameters(2).Value = CType(Rol, String)
+                command.Parameters(2).Value = CType(Rol,String)
             End If
-            If (Creditos_Mensuales.HasValue = True) Then
-                command.Parameters(3).Value = CType(Creditos_Mensuales.Value, Integer)
+            If (Creditos_Mensuales.HasValue = true) Then
+                command.Parameters(3).Value = CType(Creditos_Mensuales.Value,Integer)
             Else
                 command.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
-            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
-                command.Connection.Open()
+                command.Connection.Open
             End If
             Dim returnValue As Integer
-            Try
+            Try 
                 returnValue = command.ExecuteNonQuery
             Finally
                 If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
-                    command.Connection.Close()
+                    command.Connection.Close
                 End If
             End Try
             Return returnValue
@@ -6993,6 +7112,7 @@ Namespace BDUberAirDataSetTableAdapters
             If (dataSet.HasChanges = False) Then
                 Return 0
             End If
+<<<<<<< HEAD
             If ((Not (Me._basesTableAdapter) Is Nothing) _
                         AndAlso (Me.MatchTableAdapterConnection(Me._basesTableAdapter.Connection) = False)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" & _
@@ -7021,11 +7141,45 @@ Namespace BDUberAirDataSetTableAdapters
             If ((Not (Me._usuariosTableAdapter) Is Nothing) _
                         AndAlso (Me.MatchTableAdapterConnection(Me._usuariosTableAdapter.Connection) = False)) Then
                 Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" & _
+=======
+            If ((Not (Me._basesTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._basesTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._dronesTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._dronesTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._hoja_de_RutaTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._hoja_de_RutaTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._pasajerosTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._pasajerosTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._reservasTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._reservasTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+                        "tring.")
+            End If
+            If ((Not (Me._usuariosTableAdapter) Is Nothing)  _
+                        AndAlso (Me.MatchTableAdapterConnection(Me._usuariosTableAdapter.Connection) = false)) Then
+                Throw New Global.System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s"& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                         "tring.")
             End If
             Dim workConnection As Global.System.Data.IDbConnection = Me.Connection
             If (workConnection Is Nothing) Then
+<<<<<<< HEAD
                 Throw New Global.System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" & _
+=======
+                Throw New Global.System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana"& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                         "ger TableAdapter property to a valid TableAdapter instance.")
             End If
             Dim workConnOpened As Boolean = False
@@ -7039,7 +7193,11 @@ Namespace BDUberAirDataSetTableAdapters
             End If
             Dim workTransaction As Global.System.Data.IDbTransaction = workConnection.BeginTransaction
             If (workTransaction Is Nothing) Then
+<<<<<<< HEAD
                 Throw New Global.System.ApplicationException("The transaction cannot begin. The current data connection does not support transa" & _
+=======
+                Throw New Global.System.ApplicationException("The transaction cannot begin. The current data connection does not support transa"& _ 
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
                         "ctions or the current state is not allowing the transaction to begin.")
             End If
             Dim allChangedRows As Global.System.Collections.Generic.List(Of Global.System.Data.DataRow) = New Global.System.Collections.Generic.List(Of Global.System.Data.DataRow)()

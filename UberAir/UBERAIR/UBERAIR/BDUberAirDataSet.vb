@@ -11,7 +11,12 @@ End Class
 
 
 Namespace BDUberAirDataSetTableAdapters
+<<<<<<< HEAD
     
     Partial Public Class PasajerosTableAdapter
+=======
+
+    Partial Public Class ReservasTableAdapter
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
     End Class
 End Namespace

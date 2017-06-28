@@ -117,6 +117,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="VerReservas.Designer.vb">
+      <DependentUpon>VerReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VerReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Administrador.resx">
@@ -136,6 +142,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerReservas.resx">
+      <DependentUpon>VerReservas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
