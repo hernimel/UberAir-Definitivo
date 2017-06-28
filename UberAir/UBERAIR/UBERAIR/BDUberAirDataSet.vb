@@ -9,3 +9,9 @@
 
 End Class
 
+
+Namespace BDUberAirDataSetTableAdapters
+
+    Partial Public Class ReservasTableAdapter
+    End Class
+End Namespace

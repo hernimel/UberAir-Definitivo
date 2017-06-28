@@ -121,3 +121,4 @@ C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBE
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.VerReservas.resources

@@ -42,9 +42,10 @@ Partial Class Iniciar_Sesion
         '
         Id_empresaLabel.AutoSize = True
         Id_empresaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Id_empresaLabel.Location = New System.Drawing.Point(40, 71)
+        Id_empresaLabel.Location = New System.Drawing.Point(53, 87)
+        Id_empresaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Id_empresaLabel.Name = "Id_empresaLabel"
-        Id_empresaLabel.Size = New System.Drawing.Size(76, 20)
+        Id_empresaLabel.Size = New System.Drawing.Size(93, 25)
         Id_empresaLabel.TabIndex = 1
         Id_empresaLabel.Text = "Usuario:"
         '
@@ -52,9 +53,10 @@ Partial Class Iniciar_Sesion
         '
         ContraseñaLabel.AutoSize = True
         ContraseñaLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ContraseñaLabel.Location = New System.Drawing.Point(40, 98)
+        ContraseñaLabel.Location = New System.Drawing.Point(53, 121)
+        ContraseñaLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         ContraseñaLabel.Name = "ContraseñaLabel"
-        ContraseñaLabel.Size = New System.Drawing.Size(107, 20)
+        ContraseñaLabel.Size = New System.Drawing.Size(131, 25)
         ContraseñaLabel.TabIndex = 3
         ContraseñaLabel.Text = "Contraseña:"
         '
@@ -71,9 +73,10 @@ Partial Class Iniciar_Sesion
         'Btn_Aceptar
         '
         Me.Btn_Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Aceptar.Location = New System.Drawing.Point(140, 145)
+        Me.Btn_Aceptar.Location = New System.Drawing.Point(187, 178)
+        Me.Btn_Aceptar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btn_Aceptar.Name = "Btn_Aceptar"
-        Me.Btn_Aceptar.Size = New System.Drawing.Size(100, 32)
+        Me.Btn_Aceptar.Size = New System.Drawing.Size(133, 39)
         Me.Btn_Aceptar.TabIndex = 5
         Me.Btn_Aceptar.Text = "Aceptar"
         Me.Btn_Aceptar.UseVisualStyleBackColor = True
@@ -95,29 +98,32 @@ Partial Class Iniciar_Sesion
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(154, 71)
+        Me.txtUsuario.Location = New System.Drawing.Point(205, 87)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(100, 20)
+        Me.txtUsuario.Size = New System.Drawing.Size(132, 22)
         Me.txtUsuario.TabIndex = 6
         '
         'txtContrasenia
         '
-        Me.txtContrasenia.Location = New System.Drawing.Point(154, 98)
+        Me.txtContrasenia.Location = New System.Drawing.Point(205, 121)
+        Me.txtContrasenia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtContrasenia.Name = "txtContrasenia"
         Me.txtContrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasenia.Size = New System.Drawing.Size(100, 20)
+        Me.txtContrasenia.Size = New System.Drawing.Size(132, 22)
         Me.txtContrasenia.TabIndex = 7
         '
         'Iniciar_Sesion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(353, 258)
+        Me.ClientSize = New System.Drawing.Size(471, 318)
         Me.Controls.Add(Me.txtContrasenia)
         Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Btn_Aceptar)
         Me.Controls.Add(ContraseñaLabel)
         Me.Controls.Add(Id_empresaLabel)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Iniciar_Sesion"
         Me.Text = "Iniciar_Sesion"
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

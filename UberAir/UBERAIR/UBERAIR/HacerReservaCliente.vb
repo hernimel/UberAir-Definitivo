@@ -1,5 +1,5 @@
 ﻿Public Class HacerReservaCliente
-
+    Public usuarioLogeadoHR As String
     Private Sub HacerReservaCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -18,9 +18,6 @@
     Private Sub Btn_ConfirmarPasajeros_Click(sender As Object, e As EventArgs) Handles Btn_ConfirmarPasajeros.Click
         Dim n As Integer, k As Integer
         Dim fila As System.Data.DataRowView
-        Dim usuario As String
-
-        usuario = TxtB_NombreEmpresa.Text
 
         ListB_TodosLosPasajeros.Items.Clear()
         n = Me.PasajerosBindingSource.Count
@@ -28,7 +25,7 @@
         ListB_TodosLosPasajeros.Items.Add("NOMBRE" & vbTab & "APELLIDO" & vbTab & "DNI")
         For k = 0 To n - 1
             fila = Me.PasajerosBindingSource.Current
-            If fila.Item("Id_Empresa") = usuario Then
+            If fila.Item("Id_Empresa") = usuarioLogeadoHR Then
                 ListB_TodosLosPasajeros.Items.Add(fila.Item("Nombre") & vbTab & fila.Item("Apellido") & ", " & fila.Item("DNI"))
             End If
             Me.PasajerosBindingSource.MoveNext()
@@ -71,6 +68,15 @@
     End Sub
 
     Private Sub TxtB_NumeroDePasajeros_TextChanged(sender As Object, e As EventArgs) Handles TxtB_NumeroDePasajeros.TextChanged
+
+    End Sub
+
+    Private Sub Btn_VerReservas_Click(sender As Object, e As EventArgs) Handles Btn_VerReservas.Click
+        VerReservas.Show()
+
+    End Sub
+
+    Private Sub ConfirmarReservas_Click(sender As Object, e As EventArgs) Handles ConfirmarReserva.Click
 
     End Sub
 End Class

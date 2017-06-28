@@ -1,5 +1,5 @@
 ﻿Public Class Iniciar_Sesion
-
+    Public usuarioLogeadoIS As String
     Private Sub UsuariosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.UsuariosBindingSource.EndEdit()
@@ -9,7 +9,7 @@
 
     Private Sub Iniciar_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BDUberAirDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-        UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
+      Me.UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
         txtUsuario.Text = ""
         txtContrasenia.Text = ""
 
@@ -37,6 +37,8 @@
                     'Exit For
                 Else
                     Cliente.Show()
+                    usuarioLogeadoIS = Usuario
+                    HacerReservaCliente.usuarioLogeadoHR = usuarioLogeadoIS
                 End If
                 Exit For
                 'Else
