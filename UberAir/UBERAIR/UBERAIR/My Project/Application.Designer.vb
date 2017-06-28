@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.UBERAIR.Cliente
+            Me.MainForm = Global.UBERAIR.Administrador
         End Sub
     End Class
 End Namespace

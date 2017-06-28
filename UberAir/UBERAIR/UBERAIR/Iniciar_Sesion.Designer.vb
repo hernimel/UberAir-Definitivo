@@ -110,6 +110,7 @@ Partial Class Iniciar_Sesion
         '
         'Iniciar_Sesion
         '
+        Me.AcceptButton = Me.Btn_Aceptar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(353, 258)

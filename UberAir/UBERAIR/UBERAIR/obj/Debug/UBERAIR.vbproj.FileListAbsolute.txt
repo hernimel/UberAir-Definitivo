@@ -121,3 +121,17 @@ C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBE
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
 C:\Users\Franco\Desktop\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe.config
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.exe
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.xml
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.pdb
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.exe
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.pdb
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\bin\Debug\UBERAIR.xml
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbprojResolveAssemblyReference.cache
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Administrador.resources
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Cliente.resources
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.HacerReservaCliente.resources
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Iniciar_Sesion.resources
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.Resources.resources
+C:\Users\herna_000\Desktop\UberAireditando\UberAir-Definitivo\UberAir\UBERAIR\UBERAIR\obj\Debug\UBERAIR.vbproj.GenerateResource.Cache
