@@ -73,8 +73,57 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Btn_AgregarUsuarios.Click
-        Me.UsuariosTableAdapter.InsertUsuariosQuery(Id_empresaTextBoxUsuarios.Text, ContraseñaTextBoxUsuarios.Text, RolTextBoxUsuarios.Text, Creditos_MensualesTextBoxUsuarios.Text)
+        Dim n, i As Integer
+        Dim EmpresaIngresada As String
+        Dim Contraseña As String
+        Dim Rol As String
+        Dim Creditos_Mensuales As Integer
+        Dim fila As System.Data.DataRowView
+
+       
+
+        EmpresaIngresada = InputBox("Ingrese Id_Empresa")
+        If EmpresaIngresada = "" Then
+            MessageBox.Show("No se ingresó ningún Id_Empresa")
+            Exit Sub
+        End If
+
+        n = Me.UsuariosBindingSource.Count 'Cuenta la cantidad de registros
+        Me.UsuariosBindingSource.MoveFirst()
+
+        For i = 1 To n
+            fila = Me.UsuariosBindingSource.Current
+            If EmpresaIngresada = fila.Item("Id_empresa") Then
+                MessageBox.Show("La empresa ingresada ya existe, por favor ingrese otra")
+                Exit Sub
+            End If
+            Me.UsuariosBindingSource.MoveNext()
+        Next
+
+        Contraseña = InputBox("Ingrese Contraseña")
+        If Contraseña = "" Then
+            MessageBox.Show("No se ingresó ninguna Contraseña")
+            Exit Sub
+        End If
+        Rol = InputBox("Ingrese Rol")
+        If Rol = "" Then
+            MessageBox.Show("No se ingresó ningún Rol")
+            Exit Sub
+        ElseIf Rol <> ("Cliente") Or Rol <> ("Admin") Then
+            MessageBox.Show("Error en el Rol de Usuario, recuerde que las categorías son: Cliente o Admin ")
+            Exit Sub
+        End If
+        Creditos_Mensuales = InputBox("Ingrese Créditos Mensuales")
+        If Creditos_Mensuales = "0" Then
+            MessageBox.Show("No se ingresaron Créditos Mensuales")
+            Exit Sub
+        End If
+
+        
+
+        Me.UsuariosTableAdapter.InsertUsuariosQuery(EmpresaIngresada, Contraseña, Rol, Creditos_Mensuales)
         Me.UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btn_ModificarUsuarios.Click
@@ -88,12 +137,82 @@
     End Sub
 
     Private Sub Btn_AgregarPasajeros_Click(sender As Object, e As EventArgs) Handles Btn_AgregarPasajeros.Click
-        Me.PasajerosTableAdapter.InsertPasajerosQuery(Id_EmpresaTextBox.Text, NombreTextBox.Text, ApellidoTextBox.Text, DNITextBox.Text, CelularTextBox.Text)
+        Dim n, i, a, b, c As Integer
+        Dim Empresa As String
+        Dim Nombre As String
+        Dim Apellido As String
+        Dim DNI As Integer
+        Dim Celular As Integer
+        Dim fila As System.Data.DataRowView
+
+        a = 0
+        b = 0
+        c = 0
+        n = 0
+        i = 0
+
+        n = Me.PasajerosBindingSource.Count
+
+        Empresa = InputBox("Ingrese la Empresa de el/la nuevo/a Pasajero/a")
+
+        If Empresa = "" Then
+            MessageBox.Show("No se ingresó ningúna Empresa")
+            Exit Sub
+        End If
+
+
+        Nombre = InputBox("Ingrese el Nombre del nuevo/a Pasajero/a")
+
+        If Nombre = "" Then
+            MessageBox.Show("No se ingresó ningún Nombre")
+            Exit Sub
+        End If
+
+        Apellido = InputBox("Ingrese el Apellido de el/la nuevo/a Pasajero/a")
+
+
+        If Apellido = "" Then
+            MessageBox.Show("No se ingresó ningún Apellido")
+            Exit Sub
+        End If
+
+        DNI = InputBox("Ingrese el DNI del nuevo/a Pasajero/a")
+
+        If DNI = "0" Then
+            MessageBox.Show("No se ingresó ningún Apellido")
+            Exit Sub
+        End If
+
+
+        Me.PasajerosBindingSource.MoveFirst()
+
+        For b = 1 To n
+            fila = Me.PasajerosBindingSource.Current
+            If DNI = fila.Item("DNI") Then
+                MessageBox.Show("El DNI ingresado ya existe, por favor ingrese otro")
+                Exit Sub
+            End If
+            Me.PasajerosBindingSource.MoveNext()
+        Next
+
+        Celular = InputBox("Ingrese el Celular del nuevo/a Pasajero/a")
+
+        If Celular = "0" Then
+            MessageBox.Show("No se ingresó ningún Celular")
+            Exit Sub
+        End If
+
+
+
+
+
+        Me.PasajerosTableAdapter.InsertPasajerosQuery(Empresa, Nombre, Apellido, DNI, Celular)
         Me.PasajerosTableAdapter.Fill(Me.BDUberAirDataSet.Pasajeros)
     End Sub
 
     Private Sub Btn_ModificarPasajeros_Click(sender As Object, e As EventArgs) Handles Btn_ModificarPasajeros.Click
-        Me.PasajerosTableAdapter.UpdatePasajerosQuery(Id_EmpresaTextBox.Text, NombreTextBox.Text, ApellidoTextBox.Text, DNITextBox.Text, CelularTextBox.Text)
+
+        Me.PasajerosTableAdapter.UpdatePasajeroQueryNueva(Id_EmpresaTextBox.Text, NombreTextBox.Text, ApellidoTextBox.Text, DNITextBox.Text, CelularTextBox.Text)
         Me.PasajerosTableAdapter.Fill(Me.BDUberAirDataSet.Pasajeros)
     End Sub
 
@@ -110,20 +229,22 @@
     Private Sub Btn_InsertarBases_Click(sender As Object, e As EventArgs) Handles Btn_InsertarBases.Click
 
         Dim nomBase As String
+        Dim n, i As Integer
+        Dim fila As System.Data.DataRowView
 
         nomBase = InputBox("Ingrese la nueva Base")
 
-        'n = Me.DronesBindingSource.Count 'Cuenta la cantidad de registros
-        'Me.DronesBindingSource.MoveFirst()
+        n = Me.BasesBindingSource.Count 'Cuenta la cantidad de registros
+        Me.BasesBindingSource.MoveFirst()
 
-        'For i = 1 To n
-        '    fila = Me.DronesBindingSource.Current
-        '    If nomBase = fila.Item("id_Drone") Then
-        '        MessageBox.Show("El id del Drone ya existe, por favor ingrese otro")
-        '        Exit Sub
-        '    End If
-        '    Me.DronesBindingSource.MoveNext()
-        'Next
+        For i = 1 To n
+            fila = Me.BasesBindingSource.Current
+            If nomBase = fila.Item("Nombre") Then
+                MessageBox.Show("La base ya existe, por favor ingrese otra")
+                Exit Sub
+            End If
+            Me.BasesBindingSource.MoveNext()
+        Next
 
         Me.BasesTableAdapter.InsertBasesQuery(nomBase)
         Me.BasesTableAdapter.Fill(Me.BDUberAirDataSet.Bases)

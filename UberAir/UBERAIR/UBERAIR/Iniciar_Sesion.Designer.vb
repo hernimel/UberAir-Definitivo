@@ -115,7 +115,12 @@ Partial Class Iniciar_Sesion
         '
         'Iniciar_Sesion
         '
+<<<<<<< HEAD
+        Me.AcceptButton = Me.Btn_Aceptar
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+=======
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+>>>>>>> 02343c3bddd918b65639694366ee626634523c31
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(471, 318)
         Me.Controls.Add(Me.txtContrasenia)

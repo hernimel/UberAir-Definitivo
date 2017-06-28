@@ -69,6 +69,7 @@ Partial Class Administrador
         Me.Btn_EliminarBases = New System.Windows.Forms.Button()
         Me.Btn_InsertarBases = New System.Windows.Forms.Button()
         Me.BasesDataGridView = New System.Windows.Forms.DataGridView()
+        Me.NombreTextBox1 = New System.Windows.Forms.TextBox()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -100,15 +101,14 @@ Partial Class Administrador
         Me.DataGridViewTextBoxColumn22 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn23 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReservasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DataGridViewTextBoxColumn24 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BasesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DronesTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.DronesTableAdapter()
         Me.TableAdapterManager = New UBERAIR.BDUberAirDataSetTableAdapters.TableAdapterManager()
         Me.UsuariosTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.UsuariosTableAdapter()
         Me.PasajerosTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.PasajerosTableAdapter()
         Me.ReservasTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.ReservasTableAdapter()
         Me.BasesTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.BasesTableAdapter()
-        Me.NombreTextBox1 = New System.Windows.Forms.TextBox()
         Id_empresaLabel = New System.Windows.Forms.Label()
         ContraseñaLabel = New System.Windows.Forms.Label()
         RolLabel = New System.Windows.Forms.Label()
@@ -219,6 +219,16 @@ Partial Class Administrador
         CelularLabel.Size = New System.Drawing.Size(42, 13)
         CelularLabel.TabIndex = 12
         CelularLabel.Text = "Celular:"
+        '
+        'NombreLabel1
+        '
+        NombreLabel1.AutoSize = True
+        NombreLabel1.Location = New System.Drawing.Point(409, 199)
+        NombreLabel1.Name = "NombreLabel1"
+        NombreLabel1.Size = New System.Drawing.Size(47, 13)
+        NombreLabel1.TabIndex = 3
+        NombreLabel1.Text = "Nombre:"
+        NombreLabel1.Visible = False
         '
         'TabControl1
         '
@@ -462,7 +472,7 @@ Partial Class Administrador
         'Btn_AgregarPasajeros
         '
         Me.Btn_AgregarPasajeros.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_AgregarPasajeros.Location = New System.Drawing.Point(560, 25)
+        Me.Btn_AgregarPasajeros.Location = New System.Drawing.Point(560, 20)
         Me.Btn_AgregarPasajeros.Name = "Btn_AgregarPasajeros"
         Me.Btn_AgregarPasajeros.Size = New System.Drawing.Size(194, 43)
         Me.Btn_AgregarPasajeros.TabIndex = 1
@@ -597,6 +607,14 @@ Partial Class Administrador
         Me.BasesDataGridView.Name = "BasesDataGridView"
         Me.BasesDataGridView.Size = New System.Drawing.Size(508, 208)
         Me.BasesDataGridView.TabIndex = 0
+        '
+        'NombreTextBox1
+        '
+        Me.NombreTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BasesBindingSource, "Nombre", True))
+        Me.NombreTextBox1.Location = New System.Drawing.Point(462, 196)
+        Me.NombreTextBox1.Name = "NombreTextBox1"
+        Me.NombreTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.NombreTextBox1.TabIndex = 4
         '
         'TabPage6
         '
@@ -782,16 +800,16 @@ Partial Class Administrador
         Me.ReservasBindingSource.DataMember = "Reservas"
         Me.ReservasBindingSource.DataSource = Me.BDUberAirDataSet
         '
-        'BasesBindingSource
-        '
-        Me.BasesBindingSource.DataMember = "Bases"
-        Me.BasesBindingSource.DataSource = Me.BDUberAirDataSet
-        '
         'DataGridViewTextBoxColumn24
         '
         Me.DataGridViewTextBoxColumn24.DataPropertyName = "Nombre"
         Me.DataGridViewTextBoxColumn24.HeaderText = "Nombre"
         Me.DataGridViewTextBoxColumn24.Name = "DataGridViewTextBoxColumn24"
+        '
+        'BasesBindingSource
+        '
+        Me.BasesBindingSource.DataMember = "Bases"
+        Me.BasesBindingSource.DataSource = Me.BDUberAirDataSet
         '
         'DronesTableAdapter
         '
@@ -823,24 +841,6 @@ Partial Class Administrador
         'BasesTableAdapter
         '
         Me.BasesTableAdapter.ClearBeforeFill = True
-        '
-        'NombreTextBox1
-        '
-        Me.NombreTextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BasesBindingSource, "Nombre", True))
-        Me.NombreTextBox1.Location = New System.Drawing.Point(462, 196)
-        Me.NombreTextBox1.Name = "NombreTextBox1"
-        Me.NombreTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.NombreTextBox1.TabIndex = 4
-        '
-        'NombreLabel1
-        '
-        NombreLabel1.AutoSize = True
-        NombreLabel1.Location = New System.Drawing.Point(409, 199)
-        NombreLabel1.Name = "NombreLabel1"
-        NombreLabel1.Size = New System.Drawing.Size(47, 13)
-        NombreLabel1.TabIndex = 3
-        NombreLabel1.Text = "Nombre:"
-        NombreLabel1.Visible = False
         '
         'Administrador
         '
