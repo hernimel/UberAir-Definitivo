@@ -35,9 +35,10 @@ Partial Class Cliente
         '
         'Btn_AdministrarPasajeros
         '
-        Me.Btn_AdministrarPasajeros.Location = New System.Drawing.Point(362, 48)
+        Me.Btn_AdministrarPasajeros.Location = New System.Drawing.Point(483, 59)
+        Me.Btn_AdministrarPasajeros.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btn_AdministrarPasajeros.Name = "Btn_AdministrarPasajeros"
-        Me.Btn_AdministrarPasajeros.Size = New System.Drawing.Size(237, 465)
+        Me.Btn_AdministrarPasajeros.Size = New System.Drawing.Size(316, 572)
         Me.Btn_AdministrarPasajeros.TabIndex = 1
         Me.Btn_AdministrarPasajeros.Text = "Administrar Pasajeros"
         Me.Btn_AdministrarPasajeros.UseVisualStyleBackColor = True
@@ -69,20 +70,22 @@ Partial Class Cliente
         '
         'Btn_HacerReserva
         '
-        Me.Btn_HacerReserva.Location = New System.Drawing.Point(61, 48)
+        Me.Btn_HacerReserva.Location = New System.Drawing.Point(81, 59)
+        Me.Btn_HacerReserva.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Btn_HacerReserva.Name = "Btn_HacerReserva"
-        Me.Btn_HacerReserva.Size = New System.Drawing.Size(237, 465)
+        Me.Btn_HacerReserva.Size = New System.Drawing.Size(316, 572)
         Me.Btn_HacerReserva.TabIndex = 2
         Me.Btn_HacerReserva.Text = "Hacer Reserva"
         Me.Btn_HacerReserva.UseVisualStyleBackColor = True
         '
         'Cliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(893, 540)
+        Me.ClientSize = New System.Drawing.Size(885, 741)
         Me.Controls.Add(Me.Btn_HacerReserva)
         Me.Controls.Add(Me.Btn_AdministrarPasajeros)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Cliente"
         Me.Text = "Cliente"
         CType(Me.BDUberAirDataSet, System.ComponentModel.ISupportInitialize).EndInit()

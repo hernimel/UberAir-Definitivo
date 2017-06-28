@@ -9,7 +9,7 @@
 
     Private Sub Iniciar_Sesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'BDUberAirDataSet.Usuarios' Puede moverla o quitarla según sea necesario.
-        Me.UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
+        UsuariosTableAdapter.Fill(Me.BDUberAirDataSet.Usuarios)
         txtUsuario.Text = ""
         txtContrasenia.Text = ""
 
