@@ -49,14 +49,11 @@ Partial Class HacerReservaCliente
         Me.ConfirmarReserva = New System.Windows.Forms.Button()
         Me.PasajerosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReservasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ReservasTableAdapter = New UBERAIR.BDUberAirDataSetTableAdapters.ReservasTableAdapter()
-        Me.BdUberAirDataSet = New UBERAIR.BDUberAirDataSet()
         Lbl_IdReserva = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PasajerosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ReservasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BdUberAirDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Lbl_IdReserva
@@ -281,15 +278,6 @@ Partial Class HacerReservaCliente
         Me.ConfirmarReserva.Text = "Confirmar"
         Me.ConfirmarReserva.UseVisualStyleBackColor = True
         '
-        'ReservasTableAdapter
-        '
-        Me.ReservasTableAdapter.ClearBeforeFill = True
-        '
-        'BdUberAirDataSet
-        '
-        Me.BdUberAirDataSet.DataSetName = "BDUberAirDataSet"
-        Me.BdUberAirDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'HacerReservaCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -325,7 +313,6 @@ Partial Class HacerReservaCliente
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PasajerosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ReservasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BdUberAirDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -355,6 +342,4 @@ Partial Class HacerReservaCliente
     Friend WithEvents ReservasBindingSource As BindingSource
     Friend WithEvents Btn_VerReservas As Button
     Friend WithEvents ConfirmarReserva As Button
-    Friend WithEvents ReservasTableAdapter As BDUberAirDataSetTableAdapters.ReservasTableAdapter
-    Friend WithEvents BdUberAirDataSet As BDUberAirDataSet
 End Class
